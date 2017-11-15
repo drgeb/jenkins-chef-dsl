@@ -16,16 +16,7 @@ driver:
         auto_correct: true
 
 platforms:
-  - name: ubuntu-14.04
-    run_list:
-      - jenkins-chef-dsl::build-jdks
-      - apt::default
-      - jenkins::java
-  - name: centos-6.6
-    run_list:
-      - yum::default
-      - jenkins::java
-  - name: centos-7.0
+  - name: centos-7.4
     run_list:
       - yum::default
       - jenkins::java
