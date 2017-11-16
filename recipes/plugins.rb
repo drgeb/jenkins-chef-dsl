@@ -52,7 +52,7 @@ end
 end
 
 # More others
-%w(copyartifact checkstyle ansicolor build-blocker-plugin build-user-vars-plugin envinject gradle grails groovy groovy-postbuild violations).each do |plugin|
+%w(copyartifact checkstyle ansicolor build-blocker-plugin build-user-vars-plugin envinject gradle groovy groovy-postbuild violations slack).each do |plugin|
   plugin, version = plugin.split('=')
   jenkins_plugin plugin do
     version version if version

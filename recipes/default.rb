@@ -13,7 +13,7 @@ include_recipe 'jenkins::master'
 
 # Install any required plugins and setup auth.
 include_recipe 'jenkins-chef-dsl::plugins'
-include_recipe 'jenkins-chef-dsl::auth'
+#include_recipe 'jenkins-chef-dsl::auth'
 
 # Setup .gitconfig, needed on first chef
 template "#{node['jenkins']['master']['home']}/.gitconfig" do

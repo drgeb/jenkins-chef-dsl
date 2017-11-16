@@ -7,10 +7,11 @@ default['jenkins-chef']['AuthorizationStrategy'] = 'FullControlOnceLoggedInAutho
 #  Create a 'Developer Application' on Github.
 #  https://github.com/settings/applications
 #  Works for Github Enteprise too!
-default['jenkins-chef']['github']['site']         = 'https://github.com'
-default['jenkins-chef']['github']['api_endpoint'] = 'https://api.github.com'
-default['jenkins-chef']['github']['API_KEY']      = '2001819b76ae294309d9'
-default['jenkins-chef']['github']['API_SECRET']   = '88c53c57912629e3d954d7e3c5af4dcb874a8022'
+default['jenkins-chef']['github']['githubWebUri']         = 'https://github.com'
+default['jenkins-chef']['github']['githubApiUri'] = 'https://api.github.com'
+default['jenkins-chef']['github']['CLIENTID'] = 'FIXME'
+default['jenkins-chef']['github']['CLIENT_SECRET'] = 'FIXME'
+default['jenkins-chef']['github']['oauthScopes'] = 'read:org'
 
 # SCM details
 default['jenkins-chef']['git']['name']  = 'jenkins'

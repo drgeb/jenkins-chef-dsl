@@ -9,10 +9,11 @@ jenkins_script 'add_gh_authentication' do
     def instance = Jenkins.getInstance()
 
     def githubRealm = new GithubSecurityRealm(
-      '#{node['jenkins-chef']['github']['site']}',
-      '#{node['jenkins-chef']['github']['api_endpoint']}',
-      '#{node['jenkins-chef']['github']['API_KEY']}',
-      '#{node['jenkins-chef']['github']['API_SECRET']}'
+      '#{node['jenkins-chef']['github']['githubWebUri']}',
+      '#{node['jenkins-chef']['github']['githubApiUri']}',
+      '#{node['jenkins-chef']['github']['CLIENTID']}',
+      '#{node['jenkins-chef']['github']['CLIENT_SECRET']}'
+      '#{node['jenkins-chef']['github']['oauthScopes']}',
     )
     instance.setSecurityRealm(githubRealm)
 
